@@ -1,0 +1,100 @@
+@charset "UTF-8";
+#header {
+  height: 130px;
+  background-color: aquamarine;
+  position: relative;
+}
+
+.header__container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 250px;
+  height: 50px;
+  background-color: blue;
+  text-align: center;
+  line-height: 50px;
+}
+
+.nav__wrapper {
+  display: none;
+  transform: translateX(-120%);
+  transition-duration: 0.3s;
+}
+
+.nav__item-link {
+  display: block;
+  padding: 5px 15px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.humburger__btn {
+  width: 18px;
+  height: 18px;
+  position: relative;
+}
+.humburger__btn span {
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
+.humburger__btn span:nth-child(1) {
+  position: absolute;
+  top: 0;
+  transition-duration: 0.3s;
+}
+.humburger__btn span:nth-child(2) {
+  position: absolute;
+  top: 9px;
+}
+.humburger__btn span:nth-child(3) {
+  position: absolute;
+  top: 18px;
+  transition-duration: 0.3s;
+}
+
+/* .activeがついたときのスタイル */
+.header__container.active .nav {
+  width: 350px;
+  height: 100vh;
+  background-color: beige;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header__container.active .nav__wrapper {
+  margin-top: 100px;
+  display: block;
+  transform: translateX(0%);
+}
+.header__container.active .nav__item-link {
+  margin-bottom: 100px;
+}
+.header__container.active .humburger__btn {
+  position: absolute;
+  z-index: 100;
+  top: 30px;
+  right: 30px;
+}
+.header__container.active .humburger__btn span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.header__container.active .humburger__btn span:nth-child(2) {
+  display: none;
+}
+.header__container.active .humburger__btn span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=style.css.map */
